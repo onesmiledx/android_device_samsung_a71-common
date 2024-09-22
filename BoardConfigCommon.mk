@@ -124,8 +124,8 @@ VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix_legacy.xml \
-    hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml \
-    vendor/superior/config/device_framework_matrix.xml \
+    $(COMMON_PATH)/hw/vintf/samsung_framework_compatibility_matrix.xml \
+    vendor/aosp/config/device_framework_matrix.xml \
 
 DEVICE_MANIFEST_FILE := \
     $(COMMON_PATH)/manifest.xml
@@ -174,7 +174,7 @@ TARGET_HEALTH_CHARGING_CONTROL_CHARGING_DISABLED := 1
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
 # Partitions
-include vendor/superior/config/BoardConfigReservedSize.mk
+include vendor/aosp/config/BoardConfigReservedSize.mk
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_CACHEIMAGE_PARTITION_SIZE := 419430400
@@ -207,6 +207,8 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
+# Hardware
+include $(COMMON_PATH)/hw/Android.mk
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 QCOM_BOARD_PLATFORMS += sm6150

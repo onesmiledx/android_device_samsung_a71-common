@@ -10,3 +10,7 @@ vendor.samsung.hardware.radio::ISehRadio                                        
 vendor.samsung.hardware.radio.bridge::ISehBridge                                       u:object_r:hal_telephony_hwservice:s0
 vendor.samsung.hardware.radio.channel::ISehChannel                                     u:object_r:hal_telephony_hwservice:s0
 vendor.samsung.hardware.thermal::ISehThermal                                           u:object_r:hal_thermal_samsung_hwservice:s0
+vendor.eureka.hardware.parts::IBatteryStats                                            u:object_r:hal_parts_hwservice:s0
+vendor.eureka.hardware.parts::IFlashBrightness                                         u:object_r:hal_parts_hwservice:s0
+vendor.eureka.hardware.parts::IDisplayConfigs                                          u:object_r:hal_parts_hwservice:s0
+vendor.eureka.hardware.parts::ISwapOnData                                              u:object_r:hal_parts_hwservice:s0
