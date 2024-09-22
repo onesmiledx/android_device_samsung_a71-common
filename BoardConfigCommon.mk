@@ -124,7 +124,7 @@ VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix_legacy.xml \
-    $(COMMON_PATH)/hardware/vintf/samsung_framework_compatibility_matrix.xml \
+    $(COMMON_PATH)/hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml \
     vendor/aosp/config/device_framework_matrix.xml \
 
 DEVICE_MANIFEST_FILE := \
@@ -207,8 +207,6 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
-# Hardware
-include $(COMMON_PATH)/hw/Android.mk
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 QCOM_BOARD_PLATFORMS += sm6150
@@ -249,7 +247,7 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 BOARD_VENDOR_SEPOLICY_DIRS += \
     $(COMMON_PATH)/sepolicy/vendor \
-    $(COMMON_PATH)hardware/samsung-ext/interfaces/sepolicy/vendor
+    $(COMMON_PATH)/hardware/samsung-ext/interfaces/sepolicy/vendor
 
 PRODUCT_PRIVATE_SEPOLICY_DIRS += \
     $(COMMON_PATH)/sepolicy/private \
