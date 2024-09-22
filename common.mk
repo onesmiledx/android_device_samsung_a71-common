@@ -520,7 +520,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     hardware/qcom-caf/common/libqti-perfd-client \
-    $(COMMON_PATH)/hw \
     hardware/google/interfaces \
     hardware/google/pixel \
     vendor/qcom/opensource/usb/etc \
@@ -587,9 +586,10 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor \
 
-# SamsungParts
+# Samsung-ext
 PRODUCT_PACKAGES += \
-    SamsungParts
+    FlashControl \
+    SmartCharge
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/a71-common/a71-common-vendor.mk)
