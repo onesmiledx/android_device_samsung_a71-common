@@ -244,15 +244,10 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 # SEPolicy
 TARGET_SEPOLICY_DIR := msmsteppe
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+include $(COMMON_PATH)/hardware/samsung-ext/interfaces/sepolicy/SEPolicy.mk
 
-BOARD_VENDOR_SEPOLICY_DIRS += \
-    $(COMMON_PATH)/sepolicy/vendor \
-    $(COMMON_PATH)/hardware/samsung-ext/interfaces/sepolicy/vendor
-
-PRODUCT_PRIVATE_SEPOLICY_DIRS += \
-    $(COMMON_PATH)/sepolicy/private \
-    $(COMMON_PATH)/hardware/samsung-ext/sepolicy/private
-
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private 
 PRODUCT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 
 # Treble
