@@ -1,8 +1,0 @@
-[submodule "hardware/samsung"]
-	path = hardware/samsung
-	url = https://github.com/Roynas-Android-Playground/android_hardware_samsung
-	branch = fourteen
-[submodule "hardware/samsung-ext"]
-	path = hardware/samsung-ext
-	url = https://github.com/Roynas-Android-Playground/hardware_samsung-extra_interfaces
-	branch = lineage-21

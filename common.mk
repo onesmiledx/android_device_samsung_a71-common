@@ -520,9 +520,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     hardware/qcom-caf/common/libqti-perfd-client \
-    hardware/google/interfaces \
-    hardware/google/pixel \
-    vendor/qcom/opensource/usb/etc \
+    vendor/qcom/opensource/usb/etc
 
 # Telephony
 PRODUCT_PACKAGES += \
